@@ -31,21 +31,25 @@
       document.getElementById("displayName").append(profile.displayName)
       document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
+
     async function main() {
       await liff.init({ liffId: "1654261817-q1M8oKn9" })
 
       liff.ready.then(() => {
-        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-        if (liff.isLoggedIn()) {
-          // getEnvironment()
-          getUserProfile()
-          // getContext()
-          // getFriendship()
-          // createUniversalLink()
-        }
-        else {
-          liff.login({redirectUri: "https://nnammm.github.io/liff/path"})
-        }
+
+        getUserProfile()
+
+        // document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+        // if (liff.isLoggedIn()) {
+        //   // getEnvironment()
+        //   getUserProfile()
+        //   // getContext()
+        //   // getFriendship()
+        //   // createUniversalLink()
+        // }
+        // else {
+        //   liff.login({redirectUri: "https://nnammm.github.io/liff/path"})
+        // }
       })
     }
     main()
