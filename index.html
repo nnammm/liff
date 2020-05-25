@@ -60,9 +60,17 @@
     }
 
     function openWindow() {
+      //open browser
+      //1.in app
+      //2.external
+      liff.openWindow({
+        url: "https://line.me",
+        external: true
+      })
     }
 
     async function getFriendship() {
+      //add friend
     }
 
     async function sendMsg() {
