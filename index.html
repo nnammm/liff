@@ -57,15 +57,17 @@
     }
 
     async function scanCode() {
+        const result = await liff.scanCode()
+        document.getElementById("scanCode").append(result.value)
+
     }
 
     function openWindow() {
       //open browser
-      //1.in app
-      //2.external
+      //1.in app 2.external
       liff.openWindow({
         url: "https://line.me",
-        external: true
+        external: true 
       })
     }
 
