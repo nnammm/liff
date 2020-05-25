@@ -56,10 +56,10 @@
     function closed() {
     }
 
-    async function scanCode() {
+    function scanCode() {
       alert("scanCode")
-      const result = await liff.scanCode()
-      document.getElementById("scanCode").append(result.value)
+      // const result = await liff.scanCode()
+      document.getElementById("scanCode").append("123456")
     }
 
     function openWindow() {
